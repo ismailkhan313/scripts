@@ -1,24 +1,29 @@
-# Nasikh Nexus
+# Scripts
 
-In Arabic, Nasikh (ناسخ) is the active participle of the verb nasakha (نسخ), which means "to copy," "to transcribe," or "to write down." A Nasikh is literally a "scribe," "copier," or "transcriber."
+A personal collection of utility scripts for downloading, converting, transcribing, and OCR'ing media and text, pulled out of individual project repos so they live in one place.
 
-A "nexus" is a central point or a connection that links two or more things. It signifies a core, a hub, or a focal point where different elements converge. In other words, Nasikh Nexus can translated to The Scribe's Hub or The Central Point of Transcription. It implies this project is the central connection point for all scribal tasks, seamlessly handling both the auditory and visual-to-text conversion.
+## Structure
 
-Nasikh Nexus is a powerful toolkit designed for processing classical Arabic content into English. This tool leverages current open-source AI models to do two things:
+```
+downloaders/
+├── youtube/                 yt-dlp wrappers: audio, transcripts
+├── wise/                    WISE course video/drive downloaders
+├── turathio/                Turath.io manuscript downloaders
+└── islamicpearls/           Islamic Pearls downloader/helpers
+transcription/
+└── whispercpp/              whisper.cpp wrappers for audio transcription
+ocr/                         Mistral and Tesseract OCR for scanned docs/manuscripts
+audio/                       ffmpeg-based audio/video conversion (mov→wav, etc.)
+extractors/                  Text/Arabic extraction from PDFs
+lecture-title-renamer/       Batch renaming for lecture files
+combine-lesson-text.py       Merge lesson transcript text files
+create-lesson-notes.py       Build lesson notes from transcripts
+```
 
-1. Produce highly accurate audio transcription of bilingual audio in Arabic and English, and Arabic only audio.
-2. Produce complete and accurate OCR for scanned documents in Arabic and English and potentially classical Arabic manuscripts.
+## Requirements
 
-The project integrates Whisper.cpp for robust speech-to-text and Mistral AI for precise OCR on Arabic texts.
+- Python 3 (`pip install -r requirements.txt`)
+- Node.js (for the Turath.io and WISE `.js`/`.mjs` scripts — `npm install`)
+- `ffmpeg`, `yt-dlp`, and a built `whisper.cpp` on `PATH` for the relevant scripts
 
-## ✨ Features
-
-1. YouTube Audio Downloader: Directly download audio from YouTube videos for transcription leveraging the `yt-dlp` and `ffmpeg` packages.
-
-2. Other web scrapers and downloaders. Specifically, downloaders for the online digital arabic manuscript repository Turath.io
-
-3. Whisper Transcription: High-accuracy, timestamped audio transcription primarily optimized for English lectures with Arabic included. Primarily leverage the popular open-source `whisper.cpp` repository for MacOS.
-
-4. Mistral OCR: Extract text from Arabic PDFs and images of manuscripts with high precision using their free and paid models.
-
-5. Modular & Organized: A clean, scalable project structure that separates concerns and is easy to maintain.
+Most scripts are standalone — read the top of each file for required env vars (e.g. `MISTRAL_API_KEY`) and usage.
