@@ -82,7 +82,7 @@ if __name__ == "__main__":
     load_dotenv()
 
     pdf_file_path = (
-        "/Users/viz1er/Codebase/nasikh-nexus/mistral-ocr/al-arabin-nawawi.pdf"
+        "/Users/viz1er/Workspace/nasikh-nexus/mistral-ocr/al-arabin-nawawi.pdf"
     )
 
     extract_arabic_text_from_pdf(pdf_file_path)

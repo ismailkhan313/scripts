@@ -7,4 +7,4 @@
 ## rename-txt.py
 
 1. Make sure lesson-titles.txt has the cleaned lesson titles that need to be updated in the below command.
-2. Use the terminal command like this: `python3 rename-txt.py "/Users/viz1er/Codebase/obsidian-vault/02 - Literature Notes/SeekersGuidance/Islamic Studies/Level 2/Ibn Abi Jamra's Abridgement of Sahih Bukhari Explained/transcripts"`
+2. Use the terminal command like this: `python3 rename-txt.py "/Users/viz1er/Workspace/obsidian-vault/02 - Literature Notes/SeekersGuidance/Islamic Studies/Level 2/Ibn Abi Jamra's Abridgement of Sahih Bukhari Explained/transcripts"`

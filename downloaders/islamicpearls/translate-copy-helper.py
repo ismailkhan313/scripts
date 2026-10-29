@@ -5,9 +5,9 @@ import pyperclip  # Library to copy/paste from the clipboard
 
 # --- Configuration ---
 # The folder containing your Arabic Markdown files.
-INPUT_DIR = "/Users/viz1er/Codebase/obsidian-vault/05 Projects/Silsila Sacra - Publishing Services/Manuscripts for Publication/Arabic to English Translated Texts/Hikam Ibn Ataillah Sharh Imam Sharnubi/Arabic"
+INPUT_DIR = "/Users/viz1er/Workspace/obsidian-vault/05 Projects/Silsila Sacra - Publishing Services/Manuscripts for Publication/Arabic to English Translated Texts/Hikam Ibn Ataillah Sharh Imam Sharnubi/Arabic"
 # The folder where the English translations will be saved.
-OUTPUT_DIR = "/Users/viz1er/Codebase/obsidian-vault/05 Projects/Silsila Sacra - Publishing Services/Manuscripts for Publication/Arabic to English Translated Texts/Hikam Ibn Ataillah Sharh Imam Sharnubi/English"
+OUTPUT_DIR = "/Users/viz1er/Workspace/obsidian-vault/05 Projects/Silsila Sacra - Publishing Services/Manuscripts for Publication/Arabic to English Translated Texts/Hikam Ibn Ataillah Sharh Imam Sharnubi/English"
 
 
 def get_translation_from_user(arabic_text: str, original_filename: str) -> str:
